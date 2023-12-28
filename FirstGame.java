@@ -7,11 +7,11 @@ public class FirstGame {
 
         //First game
         for (int i = 0; i < x; i++) {
-            System.out.println("\n" + (i + 1) + " Roll Group");
+           // System.out.println("\n" + (i + 1) + " Roll Group");
             int j = 0;
             while (j < 4) {
                 dice1 = rnd.nextInt(6) + 1;
-                System.out.println(dice1);
+                //System.out.println(dice1);
                 if (dice1 == 6) {
                     winCount++;
                     break;
@@ -46,7 +46,12 @@ public class FirstGame {
     }
 
     public static void main(String[] args){
+
         new FirstGame(1000000);
+    }
+
+    public int getWinCount() {
+        return winCount;
     }
 
     private Random rnd = new Random();
