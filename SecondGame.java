@@ -6,12 +6,12 @@ public class SecondGame {
     public SecondGame(int x){
         //Second Game
         for(int i=0;i<x;i++){
-            System.out.println("\n" + (i + 1) + " Roll Group");
+            //System.out.println("\n" + (i + 1) + " Roll Group");
             int j = 0;
             while (j < 24) {
                 dice1 = rnd.nextInt(6) + 1;
                 dice2 = rnd.nextInt(6) + 1;
-                System.out.println(dice1 + " and " + dice2);
+               // System.out.println(dice1 + " and " + dice2);
                 if (dice2 == 6 && dice1 == 6) {
                     winCount++;
                     break;
@@ -46,6 +46,10 @@ public class SecondGame {
 
     public static void main(String[] args){
         new SecondGame(1000000);
+    }
+
+    public int getWinCount() {
+        return winCount;
     }
 
     private int dice1, dice2;
